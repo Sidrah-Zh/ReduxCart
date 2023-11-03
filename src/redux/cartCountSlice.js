@@ -18,10 +18,17 @@ const cartCountSlice = createSlice({
       }
       return state;
     },
+    resetCartCount: (state) => {
+      return 0;
+    },
   },
 });
 
-export const { updateCartCount, incrementCartCount, decrementCartCount } =
-  cartCountSlice.actions;
+export const {
+  updateCartCount,
+  incrementCartCount,
+  decrementCartCount,
+  resetCartCount,
+} = cartCountSlice.actions;
 
 export default cartCountSlice.reducer;

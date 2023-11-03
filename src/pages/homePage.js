@@ -17,6 +17,7 @@ const HomePage = () => {
     : jsondata.slice(0, 4).filter((product) => {
         return product.title.toLowerCase().includes(searchQuery.toLowerCase());
       });
+
   return (
     <div>
       <Banner />
@@ -26,7 +27,7 @@ const HomePage = () => {
             key={index}
             id={product.id}
             title={product.title}
-            imageUrl={product.image}
+            image={product.image}
             newPrice={product.newPrice}
             oldPrice={product.oldPrice}
             discountInPercentage={product.discountInPercentage}

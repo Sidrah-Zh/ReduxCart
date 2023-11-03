@@ -4,7 +4,11 @@ import ProductCard from "../components/productCard";
 import jsondata from "../data.json";
 import { useDispatch, useSelector } from "react-redux";
 import { addMultipleToCart } from "../redux/cartSlice";
-import { updateCartCount, incrementCartCount } from "../redux/cartCountSlice";
+import {
+  updateCartCount,
+  incrementCartCount,
+  decrementCartCount,
+} from "../redux/cartCountSlice";
 
 const ProductPage = () => {
   const dispatch = useDispatch();
@@ -16,6 +20,7 @@ const ProductPage = () => {
   const addToCartAndIncrementCount = (product) => {
     dispatch(addToCart(product));
     dispatch(incrementCartCount());
+    dispatch(decrementCartCount());
   };
   const uniqueId = uuidv4();
 
@@ -24,7 +29,7 @@ const ProductPage = () => {
       ...product,
       id: uuidv4(),
     }));
-
+    console.log(allProducts);
     dispatch(addMultipleToCart(allProducts));
 
     const totalProductsInCart = allProducts.length;
@@ -50,7 +55,7 @@ const ProductPage = () => {
             key={index}
             id={product.id}
             title={product.title}
-            imageUrl={product.image}
+            image={product.image}
             newPrice={product.newPrice}
             oldPrice={product.oldPrice}
             discountInPercentage={product.discountInPercentage}

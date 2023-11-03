@@ -12,7 +12,7 @@ import {
 
 const ProductCard = ({
   id,
-  imageUrl,
+  image,
   title,
   newPrice,
   oldPrice,
@@ -25,7 +25,7 @@ const ProductCard = ({
   const handleAddToCart = () => {
     const product = {
       id,
-      imageUrl,
+      image,
       title,
       newPrice,
       oldPrice,
@@ -37,7 +37,7 @@ const ProductCard = ({
   };
 
   const handleFavorite = () => {
-    dispatch(setfvrtlist(imageUrl));
+    dispatch(setfvrtlist(image));
     dispatch(incrementFavoritesCount());
   };
   return (
@@ -71,8 +71,8 @@ const ProductCard = ({
         </div>
 
         <img
-          className="w-[172px] h-[152px] t-[14px]"
-          src={imageUrl}
+          className="w-[200px] h-[200px] mx-[1rem] my-[1rem] "
+          src={image}
           alt={title}
         />
       </div>
