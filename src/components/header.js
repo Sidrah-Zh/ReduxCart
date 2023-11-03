@@ -5,10 +5,14 @@ import { BsCart3 } from "react-icons/bs";
 import { AiOutlineHeart } from "react-icons/ai";
 import { useSelector, useDispatch } from "react-redux";
 
+import { setSearchQuery } from "../redux/searchSlice";
+
 const Header = () => {
   const cart = useSelector((state) => state.cart);
   const cartCount = useSelector((state) => state.cartCount);
   const dispatch = useDispatch();
+
+  const searchQuery = useSelector((state) => state.search);
 
   const list = useSelector((state) => state.fvrtlist);
   console.log(list);
@@ -53,9 +57,12 @@ const Header = () => {
         <div className="flex items-center space-x-4">
           <div className="flex items-center space-x-2 bg-gray-200 rounded-md pt-[5px] pr-[12px] pb-[5px] pl-[20px]">
             <input
+              className="bg-gray-200 text-black"
               type="text"
-              className="w-[200px] h-[38px] gap-5 outline-none bg-gray-200"
-              placeholder="What are you looking for?"
+              placeholder="Search by product name..."
+              value={searchQuery}
+              onChange={(e) => dispatch(setSearchQuery(e.target.value))}
+              style={{ outline: "none" }}
             />
             <BsSearch className="w-[19px] h-[19px] font-bold text-2xl cursor-pointer" />
           </div>

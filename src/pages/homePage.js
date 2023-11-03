@@ -2,16 +2,21 @@ import React, { useState } from "react";
 import Banner from "../components/banner";
 import ProductCard from "../components/productCard";
 import jsondata from "../data.json";
+import { useSelector, useDispatch } from "react-redux";
 
 const HomePage = () => {
   const [showAllProducts, setShowAllProducts] = useState(false);
+  const searchQuery = useSelector((state) => state.search);
 
   const toggleShowAllProducts = () => {
     setShowAllProducts(!showAllProducts);
   };
 
-  const displayedProducts = showAllProducts ? jsondata : jsondata.slice(0, 4);
-  console.log(displayedProducts);
+  const displayedProducts = showAllProducts
+    ? jsondata
+    : jsondata.slice(0, 4).filter((product) => {
+        return product.title.toLowerCase().includes(searchQuery.toLowerCase());
+      });
   return (
     <div>
       <Banner />

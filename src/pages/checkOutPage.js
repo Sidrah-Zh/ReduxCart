@@ -1,18 +1,22 @@
-import React, { useEffect } from "react";
+import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { removeFromCart, removeAllFromCart } from "../redux/cartSlice";
 import generatePDF from "../pages/PDFGenerator";
 import { Link } from "react-router-dom";
 import { updateQuantity, calculateSubtotal } from "../redux/cartSlice";
 import { RxCross2 } from "react-icons/rx";
+import { decrementCartCount } from "../redux/cartCountSlice";
 
 const CheckoutPage = () => {
   const cartItems = useSelector((state) => state.cart.items);
   const subtotal = useSelector((state) => state.cart.subtotal);
   const dispatch = useDispatch();
 
+  const [hoveredItem, setHoveredItem] = useState(null);
+
   const handleRemoveItem = (item) => {
     dispatch(removeFromCart(item));
+    dispatch(decrementCartCount());
   };
 
   const handleRemoveAllItems = () => {
@@ -48,9 +52,11 @@ const CheckoutPage = () => {
           <div
             key={index}
             className="cart-item flex space-between  bg-white rounded-lg shadow-md shadow-gray-300 p-2 px-[25px] mx-[4rem] mb-[2rem]  mr-[5rem]"
+            onMouseEnter={() => setHoveredItem(item)}
+            onMouseLeave={() => setHoveredItem(null)}
           >
             <div className="item-details  flex space-between  ">
-              <div className="item-info   flex justify center items-center ">
+              <div className="item-info   flex justify center items-center relative">
                 <div className="item-image">
                   <img
                     src={item.imageUrl}
@@ -58,7 +64,7 @@ const CheckoutPage = () => {
                     width="50"
                     height="50"
                   />
-                  {item.hovered && (
+                  {hoveredItem === item && (
                     <button
                       className="absolute top-0 left-0 text-red-600 hover:text-red-700 font-medium"
                       onClick={() => handleRemoveItem(item)}
@@ -99,7 +105,7 @@ const CheckoutPage = () => {
           <div>
             <button
               onClick={handleRemoveAllItems}
-              className=" mr-[6rem] bg-white text-black border hover:bg-black hover:text-white border-black py-2 px-4 font-semibold"
+              className=" mr-[6rem] bg-white text-black border hover-bg-black hover-text-white border-black py-2 px-4 font-semibold"
             >
               Remove All
             </button>
@@ -141,7 +147,7 @@ const CheckoutPage = () => {
             {" "}
             <button
               onClick={handleDownloadReceipt}
-              className="bg-red-600 my-3 hover:bg-white hover-text-red-600 text-white py-2 px-4 ml-4 mt-6 font-semibold"
+              className="bg-red-600 my-3 hover-bg-white hover-text-red-600 text-white py-2 px-4 ml-4 mt-6 font-semibold"
             >
               Download Receipt
             </button>
