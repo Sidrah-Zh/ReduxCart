@@ -7,8 +7,8 @@ import { AiOutlineArrowRight } from "react-icons/ai";
 const Banner = () => {
   return (
     <>
-      <div className="w-[1000px] h-[344px] bg-black text-white  mx-auto mt-[2rem] flex justify-center items-center">
-        <div className="mx-auto flex flex-col w-[17rem] h-[10rem] ">
+      <div className="w-[1130px] h-[344px] bg-black text-white  mx-auto mt-[2rem] flex justify-center items-center">
+        <div className="ml-[0rem] flex flex-col w-[17rem] h-[10rem] ">
           <div className="flex space-x-2 items-center">
             <img src={Apple_logo} alt="Apple Logo" />
             <p>iPhone 14 Series</p>
@@ -30,7 +30,7 @@ const Banner = () => {
 
           <div className="flex space-x-2 items-center font-bold">
             <Link to="/products">
-              <button>Shop Now</button>
+              <button className="hover:underline">Shop Now</button>
             </Link>
             <AiOutlineArrowRight />
           </div>

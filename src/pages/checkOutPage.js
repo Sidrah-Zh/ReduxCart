@@ -62,10 +62,12 @@ const CheckoutPage = () => {
   return (
     <>
       <div className="flex gap-0 mt-8">
-        <h2 className="text-xl mx-1 text-gray-600 mb-4 ml-7 mt-4">
+        <h2 className="text-xl mx-1 text-gray-600 mb-4 ml-7 mt-4 cursor-pointer hover:text-black">
           <Link to="/">Home</Link>
         </h2>
-        <h2 className="text-xl font-semibold mb-4 mt-4">/ Cart</h2>
+        <h2 className="text-xl hover:text-black  text-gray-600 font-semibold mb-4 mt-4 cursor-pointer">
+          / Cart
+        </h2>
       </div>
       <div className="checkout-page bg-white min-h-screen p-6 h-[356px]  ">
         <div className="cart-header flex space-between ml-[4rem] bg-white rounded-lg shadow-md shadow-gray-300 p-2 px-[25px]  mx-[4rem] mb-[2rem] mr-[5rem] ">
@@ -124,7 +126,7 @@ const CheckoutPage = () => {
         <div className="flex justify-between items-center">
           <div className="flex justify-between items-center mt-4   mb-[2rem] ml-[6rem] ">
             <Link to="/products">
-              <button className="mt-4 bg-white text-black hover-bg-black hover-text-white border border-black py-2 px-4  font-semibold">
+              <button className="mt-4 bg-white text-black hover:bg-black hover:text-white border border-black py-2 px-4  font-semibold">
                 Return to Products
               </button>
             </Link>
@@ -132,7 +134,7 @@ const CheckoutPage = () => {
           <div>
             <button
               onClick={handleRemoveAllItems}
-              className=" hover-bg-black hover-text-white mr-[6rem] bg-white text-black border  border-black py-2 px-4 font-semibold"
+              className=" hover:bg-black hover:text-white mr-[6rem] bg-white text-black border  border-black py-2 px-4 font-semibold"
             >
               Remove All
             </button>

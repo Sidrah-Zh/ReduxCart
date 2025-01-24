@@ -1,82 +1,82 @@
 [
     {
         "id": 1,
-        "title": "Product 1",
+        "title": "iphone 11",
         "newPrice": "120",
         "oldPrice": "160",
         "discountInPercentage": "20",
-        "image": "https://www.kasandbox.org/programming-images/avatars/spunky-sam.png"
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0W8m3PL-fO-ja5RNgZt7kIGe9MblVJrtt1Q&s"
     },
     {
         "id": 2,
-        "title": "Product 2",
+        "title": "iphone 12",
         "newPrice": "75",
         "oldPrice": "100",
         "discountInPercentage": "0",
-        "image": "https://www.kasandbox.org/programming-images/avatars/spunky-sam-green.png"
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0W8m3PL-fO-ja5RNgZt7kIGe9MblVJrtt1Q&s"
     },
     {
         "id": 3,
-        "title": "Product 3",
+        "title": "iphone 13",
         "newPrice": "50",
         "oldPrice": "60",
         "discountInPercentage": "16.67",
-        "image": "https://www.kasandbox.org/programming-images/avatars/purple-pi.png"
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0W8m3PL-fO-ja5RNgZt7kIGe9MblVJrtt1Q&s"
     },
     {
         "id": 4,
-        "title": "Product 4",
+        "title": "iphone 14",
         "newPrice": "200",
         "oldPrice": "250",
         "discountInPercentage": "20",
-        "image": "https://www.kasandbox.org/programming-images/avatars/purple-pi-teal.png"
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0W8m3PL-fO-ja5RNgZt7kIGe9MblVJrtt1Q&s"
     },
     {
         "id": 5,
-        "title": "Product 5",
+        "title": "iphone 15",
         "newPrice": "90",
         "oldPrice": "120",
         "discountInPercentage": "0",
-        "image": "https://www.kasandbox.org/programming-images/avatars/purple-pi-pink.png"
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0W8m3PL-fO-ja5RNgZt7kIGe9MblVJrtt1Q&s"
     },
     {
         "id": 6,
-        "title": "Product 6",
+        "title": "iphone 16",
         "newPrice": "30",
         "oldPrice": "40",
         "discountInPercentage": "25",
-        "image": "https://www.kasandbox.org/programming-images/avatars/primosaur-ultimate.png"
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0W8m3PL-fO-ja5RNgZt7kIGe9MblVJrtt1Q&s"
     },
     {
         "id": 7,
-        "title": "Product 7",
+        "title": "iphone 14pro",
         "newPrice": "80",
         "oldPrice": "100",
         "discountInPercentage": "0",
-        "image": "https://www.kasandbox.org/programming-images/avatars/primosaur-tree.png"
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0W8m3PL-fO-ja5RNgZt7kIGe9MblVJrtt1Q&s"
     },
     {
         "id": 8,
-        "title": "Product 8",
+        "title": "Piphone 12",
         "newPrice": "70",
         "oldPrice": "90",
         "discountInPercentage": "22.22",
-        "image": "https://www.kasandbox.org/programming-images/avatars/primosaur-sapling.png"
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0W8m3PL-fO-ja5RNgZt7kIGe9MblVJrtt1Q&s"
     },
     {
         "id": 9,
-        "title": "Product 9",
+        "title": "iphone 12",
         "newPrice": "150",
         "oldPrice": "180",
         "discountInPercentage": "16.67",
-        "image": "https://www.kasandbox.org/programming-images/avatars/orange-juice-squid.png"
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0W8m3PL-fO-ja5RNgZt7kIGe9MblVJrtt1Q&s"
     },
     {
         "id": 10,
-        "title": "Product 10",
+        "title": "iphone 12",
         "newPrice": "110",
         "oldPrice": "140",
         "discountInPercentage": "21.43",
-        "image": "https://www.kasandbox.org/programming-images/avatars/old-spice-man.png"
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0W8m3PL-fO-ja5RNgZt7kIGe9MblVJrtt1Q&s"
     }
 ]

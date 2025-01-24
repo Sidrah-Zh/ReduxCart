@@ -18,10 +18,12 @@ const ProductPage = () => {
     dispatch(addToCartAndIncrementCount(product));
   };
   const addToCartAndIncrementCount = (product) => {
-    dispatch(addToCart(product));
-    dispatch(incrementCartCount());
-    dispatch(decrementCartCount());
+    if (!cart.items.some((item) => item.id === product.id)) {
+      dispatch(addToCart(product));
+      dispatch(incrementCartCount());
+    }
   };
+
   const uniqueId = uuidv4();
 
   const moveAllToCart = () => {
@@ -43,7 +45,7 @@ const ProductPage = () => {
       <div className="flex justify-between items-center top-3 mx-7 p-4 font-bold">
         <div className="mt-4 px-4">Total Products({totalProducts})</div>
         <button
-          className="mt-4 bg-white text-black hover.bg-black hover.text-white border border-black py-2 px-4 font-semibold"
+          className="mt-4 bg-white text-black hover:bg-black hover:text-white border border-black py-2 px-4 font-semibold"
           onClick={moveAllToCart}
         >
           Move All to Cart

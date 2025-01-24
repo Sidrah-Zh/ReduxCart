@@ -21,7 +21,7 @@ const HomePage = () => {
   return (
     <div>
       <Banner />
-      <div className="grid grid-cols-4 gap-4 p-4">
+      <div className="grid grid-cols-4 gap-4 p-4 w-[1170px] mx-auto">
         {displayedProducts.map((product, index) => (
           <ProductCard
             key={index}

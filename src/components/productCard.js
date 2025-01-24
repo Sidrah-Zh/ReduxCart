@@ -41,7 +41,7 @@ const ProductCard = ({
     dispatch(incrementFavoritesCount());
   };
   return (
-    <div className="pt-[3rem] relative flex flex-col items-start justify-start">
+    <div className="pt-[3rem] relative flex flex-col items-start mx-auto">
       <div className="max-w-md mx-auto bg-gray-200 shadow-lg w-[270px] h-[250px] relative">
         <div className="absolute top-2 left-2">
           <div className="bg-red-700 text-white px-2 py-1 rounded">
@@ -66,7 +66,7 @@ const ProductCard = ({
             className="bg-white hover-bg-red-700 p-1 rounded-full"
             onClick={handleFavorite}
           >
-            <AiOutlineHeart className="text-2xl font-bold" />
+            <AiOutlineHeart className="text-2xl font-bold  " />
           </button>
         </div>
 
@@ -77,7 +77,7 @@ const ProductCard = ({
         />
       </div>
 
-      <div className="text-center mt-2 ml-[30px]">
+      <div className="text-center mt-2 ">
         <p>{title}</p>
         <p>
           <span className="text-red-700 font-bold">${newPrice}</span>{" "}

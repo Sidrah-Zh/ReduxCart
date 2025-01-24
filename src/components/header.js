@@ -26,10 +26,10 @@ const Header = () => {
   }, [cart, dispatch]);
 
   return (
-    <div>
-      <div className="w-screen h-[48px] bg-black"></div>
+    <div classname="flex justify-center items-center">
+      <div className=" h-[48px] bg-black "></div>
 
-      <div className="w-[1170px] h-[38px] left-[135px] gap-[148px] flex items-center space-x-2 justify-center mt-[2rem]">
+      <div className="w-[1170px] h-[38px] ml-[5rem] gap-[185px] flex items-center space-x-2 justify-center mt-[2rem]">
         <div
           className="w-[118px] h-[24px] font-inter font-bold text-xl text-black"
           style={{ letterSpacing: "3%" }}
@@ -46,7 +46,7 @@ const Header = () => {
           </li>
           <Link to="/products">
             <li
-              className="w-[71px] h-[24px] cursor-pointer left-[-2px] font-poppins  hover:underline font-normal text-base text-black text-center"
+              className="w-[71px] h-[24px] cursor-pointer  font-poppins  hover:underline font-normal text-base text-black text-center"
               style={{ letterSpacing: "3%" }}
             >
               Products
@@ -54,12 +54,12 @@ const Header = () => {
           </Link>
         </ul>
 
-        <div className="flex items-center space-x-4">
-          <div className="flex items-center space-x-2 bg-gray-200 rounded-md pt-[5px] pr-[12px] pb-[5px] pl-[20px]">
+        <div className="flex items-center space-x-4 pl-[7rem]">
+          <div className="flex items-center space-x-2  bg-gray-200 rounded-md pt-[5px] pr-[12px] pb-[5px] pl-[20px]">
             <input
               className="bg-gray-200 text-black"
               type="text"
-              placeholder="Search by product name..."
+              placeholder="What are you looking for?"
               value={searchQuery}
               onChange={(e) => dispatch(setSearchQuery(e.target.value))}
               style={{ outline: "none" }}
@@ -67,7 +67,7 @@ const Header = () => {
             <BsSearch className="w-[19px] h-[19px] font-bold text-2xl cursor-pointer" />
           </div>
 
-          <div className="flex gap-2 relative">
+          <div className="flex gap-2 relative pl-[1.5rem]">
             <div className="relative">
               <AiOutlineHeart className="font-bold text-3xl w-[30px] flex items-center space-x-4 cursor-pointer" />
               <div className="flex items-center justify-center">
@@ -80,7 +80,7 @@ const Header = () => {
             </div>
 
             <Link to="/checkout">
-              <div className="relative">
+              <div className="relative pl-[20px]">
                 <BsCart3 className="font-bold text-3xl w-[30px] flex items-center space-x-4 cursor-pointer" />
                 <div className="flex items-center justify-center">
                   <span className="absolute top-0 right-0 w-[19px]  h-[18px] flex items-center justify-center rounded-full bg-red-500 text-white text-center">
@@ -94,6 +94,7 @@ const Header = () => {
           </div>
         </div>
       </div>
+      <div className="w-screen border-0.5 border-solid bg-black rotate-180 opacity-30 mt-[1rem] h-[2px]"></div>
     </div>
   );
 };
